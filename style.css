@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+:root{
+    --border-color: #e3e3e3;
+    --background-color: #c3c7ca;
+    --text-color: ##34444f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://i.pinimg.com/originals/02/47/24/024724004fe59de8df8d958e9a873f5f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.draggable-list{
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.draggable-list li {
+    background-color: #ffff;
+    display: flex;
+    flex: 1;
+}
+
+.draggable-list li:not(:last-of-type){
+    border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 65px;
+    width: 65px;
+}
+
+.draggable-list li.over .draggable {
+    background-color: #eaeaea;
+}
+
+.draggable-list .dish-name {
+    margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .dish-name {
+    color: #3ae374;
+}
+
+.draggable-list li.wrong .dish-name {
+    color: #ff3838;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+}
+
+
+.check-button{
+    background-color: var(--background-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.check-button:active {
+    transform: scale(0.98);
+}
+
+.check-button:focus{
+    outline: none;
+}
